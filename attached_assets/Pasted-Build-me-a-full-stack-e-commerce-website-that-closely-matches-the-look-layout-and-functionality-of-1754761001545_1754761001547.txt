@@ -1,0 +1,73 @@
+Build me a full-stack e-commerce website that closely matches the look, layout, and functionality of amrod.co.za, but using the Amrod API for real product data.
+
+Tech Stack:
+
+Frontend: React + Next.js
+
+Backend: Node.js + Express
+
+Database: SQLite or JSON cache to store API results temporarily (for faster page loads).
+
+Requirements:
+
+API Integration
+
+Connect to the Amrod API (I will provide the base URL and API key as environment variables).
+
+Pull product list, stock counts, prices, categories, and images directly from the API.
+
+Sync data on a schedule (e.g., every 6 hours) and cache locally.
+
+Frontend Pages
+
+Homepage with hero banner, category grid, and search bar.
+
+Product listing page with multi-select filters (category, color, branding options, price range, stock availability). Filters must work exactly like amrod.co.za (no page reloads).
+
+Product detail page showing multiple images, product specs, available branding options, and stock per color/size.
+
+Branding calculator that calculates branding cost in real time based on branding method, quantity, and API pricing.
+
+Cart & Quote request flow — add to cart, request a quote, or proceed to checkout.
+
+Checkout page with placeholder payment integration for now.
+
+Branding Calculator Logic
+
+Pull branding price table from Amrod API.
+
+Calculation formula: total = (base price × qty) + (branding price × qty).
+
+Live updates when user changes quantity or branding method.
+
+Backend
+
+Express routes for:
+
+Fetching and caching product list from Amrod API
+
+Fetching product details by ID
+
+Fetching branding pricing
+
+Submitting quote requests
+
+Store quotes in SQLite with fields (customer name, email, phone, products, branding, quantity, notes).
+
+General
+
+Fully responsive design.
+
+Similar visual style to Amrod SA (colors, layout, spacing, typography) but without using their copyrighted text.
+
+Cleanly separate API calls so I can later change endpoints or authentication easily.
+
+Prepare for deployment to Vercel or Netlify, and allow connecting to my custom domain pbb.co.bw.
+
+Environment Variables:
+
+AMROD_API_KEY — my API key.
+
+AMROD_API_URL — base API URL.
+
+Goal: A working site with real data from Amrod API, filters, branding calculator, and quote/cart flow ready for styling and final touches. Output all code, folder structure, and setup instructions so I can run this on Replit immediately.
